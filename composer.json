@@ -1,0 +1,12 @@
+{
+    "name": "electrum/luke",
+    "require": {
+        "symfony/console": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "John Doe",
+            "email": "john@doe.com"
+        }
+    ]
+}
