@@ -4,11 +4,12 @@ chdir(dirname(__FILE__));
 
 `rm -rf build && mkdir build`;
 `rm -rf bin && mkdir bin`;
-`cp luke.php build`;
+`cp app.php build`;
 `cp -R src build`;
 `cp -R vendor build`;
 
-$phar = new Phar('bin/luke.phar', 0, 'luke.phar');
+$pharName = (include 'phar_name.php');
+$phar = new Phar('bin/'. $pharName, 0, $pharName);
 $phar->buildFromDirectory('build');
 $phar->setStub(file_get_contents("stub.php"));
 
